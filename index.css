@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --espresso: #1B120D;
+    --dark-coffee: #2B1A14;
+    --cream: #F5EBDD;
+    --caramel: #B87941;
+    --latte: #D8B89A;
+    --white: #FFFDF8;
+  }
+
+  html {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #1B120D;
+    color: #F5EBDD;
+    scroll-behavior: smooth;
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Georgia, serif;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1B120D;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3B261D;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #B87941;
+}
+
+/* Subtle Film Grain Texture Overlay */
+.bg-grain-texture {
+  background-image: radial-gradient(rgba(245, 235, 221, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Smooth glass effect */
+.glass-panel {
+  background: rgba(43, 26, 20, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(216, 184, 154, 0.12);
+}
+
+.glass-card {
+  background: rgba(35, 22, 17, 0.7);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(216, 184, 154, 0.1);
+}
+
+/* Steam Animation */
+@keyframes steam {
+  0% {
+    transform: translateY(0) scaleX(1);
+    opacity: 0;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-25px) scaleX(1.3);
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateY(-60px) scaleX(1.8);
+    opacity: 0;
+  }
+}
+
+.animate-steam-1 {
+  animation: steam 3.5s infinite ease-out;
+}
+
+.animate-steam-2 {
+  animation: steam 4s infinite 1.2s ease-out;
+}
+
+.animate-steam-3 {
+  animation: steam 3.8s infinite 2.1s ease-out;
+}
+
+/* Subtle Pulse Glow */
+@keyframes warmGlow {
+  0%, 100% {
+    box-shadow: 0 0 25px rgba(184, 121, 65, 0.2);
+  }
+  50% {
+    box-shadow: 0 0 45px rgba(184, 121, 65, 0.35);
+  }
+}
+
+.glow-warm {
+  animation: warmGlow 4s infinite ease-in-out;
+}
